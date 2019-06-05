@@ -10,3 +10,16 @@ get '/students' do
   @students = Student.all()
   erb(:index)
 end
+
+# Next 2 actions required for insert
+# NEW - set up a new record for 'post' to create
+get '/students/new' do
+  erb(:new)
+end
+
+# CREATE - /students with a POST
+post '/students' do
+  @student = Student.new(params)
+  @student.save()
+  erb(:create)
+end
