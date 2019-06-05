@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class House
 
-  attr_reader :name, :logo_locn
+  attr_reader :id, :name, :logo_locn
 
   def initialize(options)
     @id = options['id'].to_i,
