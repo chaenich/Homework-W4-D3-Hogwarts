@@ -13,10 +13,13 @@
 
   <label for="house-choice">House:</label>
   <select name="house" id=house-choice>
-    <option value="Gryffindor">Gryffindor</option>
+    <% @houses.each do |house| %>
+        <option value="<% house.id.first %>">< <%= house.name %> </option>
+    <% end %>
+    <!-- <option value="Gryffindor">Gryffindor</option>
     <option value="Ravenclaw">Ravenclaw</option>
     <option value="Hufflepuff">Hufflepuff</option>
-    <option value="Slytherin">Slytherin</option>
+    <option value="Slytherin">Slytherin</option> -->
   </select>
 
   <label for="age-fld">Age:</label>

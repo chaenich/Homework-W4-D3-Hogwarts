@@ -14,6 +14,7 @@ end
 # Next 2 actions required for insert
 # NEW - set up a new record for 'post' to create
 get '/students/new' do
+  @houses = House.all()
   erb(:new)
 end
 
