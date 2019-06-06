@@ -7,10 +7,10 @@ class Student
   attr_reader :first_name, :last_name, :house_id, :age, :id
 
   def initialize(options)
-    @id = options['id'].to_i,
-    @first_name = options['first_name'],
-    @last_name = options['last_name'],
-    @house_id = options['house_id'],
+    @id = options['id'].to_i
+    @first_name = options['first_name']
+    @last_name = options['last_name']
+    @house_id = options['house_id']
     @age = options['age']
   end
 
@@ -33,6 +33,7 @@ class Student
     values = [@first_name, @last_name, @house_id, @age]
     student_data = SqlRunner.run(sql, values)
     @id = student_data.first()['id'].to_i
+
   end
 
   def full_name()
